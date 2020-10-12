@@ -16,6 +16,15 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+     // Every time a user logs in variable UserDefaults.standard. is set to true
+    /** In this function we are chacking if the that variable is set tio true */
+    override func viewDidAppear(_ animated: Bool) {
+        // check the variable
+        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
+            self.performSegue(withIdentifier: "loginToHome", sender: self) // stay logged in 
+        }
+    }
+
     
     // By pressing the button, you are requesting to log into twitter
     @IBAction func onLoginButton(_ sender: Any) {
@@ -25,6 +34,7 @@ class LoginViewController: UIViewController {
                     
         TwitterAPICaller.client?.login(url: myUrl, success: {
             // if successful perform seque way, which is transition
+            UserDefaults.standard.set(true, forKey: "userLoggedIn") // keep the user logged in
             self.performSegue(withIdentifier: "loginToHome", sender: self)
 
         }, failure: { (Error) in
