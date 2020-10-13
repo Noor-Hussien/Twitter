@@ -24,3 +24,8 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/TzYOK2rF5D.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Infinite scrolling and pull to refresh ability video walkthrough
+<img src='http://g.recordit.co/Ok40qQfoZM.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
