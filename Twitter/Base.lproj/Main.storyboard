@@ -18,16 +18,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-t9-4G7">
-                                <rect key="frame" x="95" y="306.5" width="185" height="54"/>
+                                <rect key="frame" x="62.5" y="298.5" width="250" height="70"/>
                                 <color key="backgroundColor" red="0.11293557564552992" green="0.49687130622737474" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="fgQ-zl-404"/>
-                                    <constraint firstAttribute="width" constant="185" id="k3E-L4-7GY"/>
+                                    <constraint firstAttribute="height" constant="70" id="fgQ-zl-404"/>
+                                    <constraint firstAttribute="width" constant="250" id="k3E-L4-7GY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onLoginButton:" destination="AEz-XI-Nn1" eventType="touchUpInside" id="8Xu-Kx-OeD"/>
                                 </connections>
@@ -64,35 +69,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Noor Ali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-6N-VDZ">
-                                            <rect key="frame" x="89" y="0.0" width="68.5" height="88"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Noor Ali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-6N-VDZ">
+                                            <rect key="frame" x="108" y="0.0" width="267" height="49"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-t0-i7i">
-                                            <rect key="frame" x="89" y="64" width="270" height="45"/>
+                                            <rect key="frame" x="89" y="57" width="270" height="52"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-wp-FDu">
-                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-wp-FDu">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="109"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="85" id="AHr-Cc-qZX"/>
-                                                <constraint firstAttribute="width" constant="85" id="eSu-op-FWk"/>
+                                                <constraint firstAttribute="height" constant="100" id="AHr-Cc-qZX"/>
+                                                <constraint firstAttribute="width" constant="100" id="eSu-op-FWk"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2c0-t0-i7i" firstAttribute="trailing" secondItem="alj-Fj-wLL" secondAttribute="trailingMargin" id="1WH-HL-QHu"/>
                                         <constraint firstItem="7Bd-6N-VDZ" firstAttribute="top" secondItem="alj-Fj-wLL" secondAttribute="top" id="5RL-6w-ttm"/>
-                                        <constraint firstItem="7Bd-6N-VDZ" firstAttribute="leading" secondItem="qdp-wp-FDu" secondAttribute="trailing" constant="4" id="Ekw-Gl-2Jo"/>
+                                        <constraint firstItem="7Bd-6N-VDZ" firstAttribute="leading" secondItem="qdp-wp-FDu" secondAttribute="trailing" constant="8" id="Ekw-Gl-2Jo"/>
                                         <constraint firstItem="2c0-t0-i7i" firstAttribute="top" secondItem="7Bd-6N-VDZ" secondAttribute="bottom" constant="4" id="QpZ-Ab-gI3"/>
                                         <constraint firstItem="qdp-wp-FDu" firstAttribute="top" secondItem="alj-Fj-wLL" secondAttribute="top" id="dLe-sW-Uf6"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="2c0-t0-i7i" secondAttribute="bottom" id="izs-uX-n3K"/>
                                         <constraint firstItem="qdp-wp-FDu" firstAttribute="leading" secondItem="alj-Fj-wLL" secondAttribute="leading" id="jRd-lg-2u1"/>
-                                        <constraint firstItem="2c0-t0-i7i" firstAttribute="leading" secondItem="qdp-wp-FDu" secondAttribute="trailing" constant="4" id="m5K-7L-bQO"/>
+                                        <constraint firstItem="2c0-t0-i7i" firstAttribute="leading" secondItem="qdp-wp-FDu" secondAttribute="trailing" constant="8" id="m5K-7L-bQO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
