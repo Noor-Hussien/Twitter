@@ -72,11 +72,47 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         }, failure: { (task: URLSessionDataTask?, error: Error) in
             failure(error)
         })
+    }
         
-        
-        
-
+    func favoriteTweet(tweetId:Int, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+            let url =  "https://api.twitter.com/1.1/favorites/create.json" // url for creating favorite twee
+            
+            TwitterAPICaller.client?.post(url, parameters: ["id": tweetId], progress: nil,
+                    success: { (task: URLSessionDataTask, response: Any?) in
+                success()
+            }, failure: { (task: URLSessionDataTask?, error: Error) in
+                failure(error)
+            })
         
     }
     
+    func unfavoriteTweet(tweetId:Int, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        let url =  "https://api.twitter.com/1.1/favorites/destroy.json" // url for destroying  favorite twee
+        
+        TwitterAPICaller.client?.post(url, parameters: ["id": tweetId], progress: nil,
+                success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    
+    
+}
+    func retweet(tweetId:Int, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        //  we have to actually use the actual tweetId
+        // how can the tweetId be accessed in this file
+        let url =  "https://api.twitter.com/1.1/statuses/retweet/\(tweetId).json" // url for retweeting
+        
+        TwitterAPICaller.client?.post(url, parameters: ["id": tweetId], progress: nil,
+                success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    
+    
+}
+
+
+
 }

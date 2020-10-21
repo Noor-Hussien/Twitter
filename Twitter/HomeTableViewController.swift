@@ -124,6 +124,12 @@ class HomeTableViewController: UITableViewController {
             
         }
         
+        // get the favorite tween status
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int // get the twitter id and cast to Integetr
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+        
+        
         return cell
     }
     
